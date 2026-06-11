@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Fonts ───────────────────────────────────────────── */
+  --font-sans:    var(--font-inter);
+  --font-display: var(--font-playfair);
+
+  /* ── Navy palette ────────────────────────────────────── */
+  --color-navy-950: #060E1A;
+  --color-navy-900: #0A1628;
+  --color-navy-800: #0D2040;
+  --color-navy-700: #112B52;
+  --color-navy-600: #1D4E8F;
+  --color-navy-500: #2A67BE;
+  --color-navy-400: #4A84D4;
+  --color-navy-300: #80AEED;
+  --color-navy-200: #B0CCEF;
+  --color-navy-100: #D6E5F7;
+  --color-navy-50:  #EEF5FD;
+
+  /* ── Cream & Gold ────────────────────────────────────── */
+  --color-cream: #EDE8DC;
+  --color-gold:  #C9A870;
+
+  /* ── Brand blue (matches logo "mIND" tone) ───────────── */
+  --color-blue-50:  #EDF4F8;
+  --color-blue-100: #D4E8F2;
+  --color-blue-200: #A9D1E5;
+  --color-blue-300: #7FB9D7;
+  --color-blue-400: #5CA2CA;
+  --color-blue-500: #4A7BA7;
+  --color-blue-600: #4A7BA7;
+  --color-blue-700: #3A6390;
+  --color-blue-800: #2A4A6A;
+  --color-blue-900: #1A3048;
+  --color-blue-950: #0A1825;
+}
+
+/* ── Base ─────────────────────────────────────────────── */
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  background: #07101e;
+  color: #0A1628;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(37, 99, 235, 0.15);
+  color: #0A1628;
+}
+
+/* ── Scrollbar ────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #F8FAFC; }
+::-webkit-scrollbar-thumb { background: #4A7BA7; border-radius: 4px; }
+
+/* ── Utility: dot-grid background ────────────────────── */
+.bg-dot-grid {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.bg-dot-grid-light {
+  background-image: radial-gradient(circle, rgba(10,22,40,0.08) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+/* ── Video control sliders ───────────────────────────── */
+.video-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 3px;
+  border-radius: 2px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+.video-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #7FB9D7;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 0 0 2px rgba(127,185,215,0.2);
+}
+.video-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.35);
+  box-shadow: 0 0 0 4px rgba(127,185,215,0.25);
+}
+.video-slider::-moz-range-thumb {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #7FB9D7;
+  cursor: pointer;
+  border: none;
+}
