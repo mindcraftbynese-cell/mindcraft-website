@@ -20,11 +20,41 @@ const playfair = Playfair_Display({
   display: 'swap',
 })
 
+const SITE_URL = 'https://www.mindcraftbynese.com'
+
 export const metadata: Metadata = {
-  title: 'NöroLider | Nörobilim Temelli Danışmanlık',
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: 'MindCrAfT | Nörobilim Temelli Danışmanlık & Nöro Strateji Tasarımı',
+    template: '%s | MindCrAfT',
+  },
   description:
-    'C-level liderler ve İK profesyonelleri için nörobilim temelli danışmanlık, konuşmacılık, kurumsal eğitim ve nörokoçluk.',
-  keywords: 'nörobilim, liderlik, koçluk, kurumsal eğitim, danışmanlık',
+    'Beyin bilimi ve yapay zeka ile iş dünyasının dönüşüm mimarisini tasarlıyoruz. Liderlik, İK ve AI dönüşümü için nörobilim temelli danışmanlık.',
+  keywords: [
+    'nörobilim', 'liderlik', 'nöro koçluk', 'kurumsal eğitim', 'danışmanlık',
+    'yapay zeka', 'nöro strateji', 'organizasyonel dönüşüm', 'Neşe Merdinler',
+  ],
+  authors: [{ name: 'Neşe Merdinler', url: SITE_URL }],
+  creator: 'MindCrAfT by Neşe Merdinler',
+  openGraph: {
+    type: 'website',
+    locale: 'tr_TR',
+    url: SITE_URL,
+    siteName: 'MindCrAfT',
+    title: 'MindCrAfT | Nörobilim Temelli Danışmanlık & Nöro Strateji Tasarımı',
+    description:
+      'Beyin bilimi ve yapay zeka ile iş dünyasının dönüşüm mimarisini tasarlıyoruz. Liderlik, İK ve AI dönüşümü için nörobilim temelli danışmanlık.',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'MindCrAfT' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'MindCrAfT | Nörobilim Temelli Danışmanlık & Nöro Strateji Tasarımı',
+    description:
+      'Beyin bilimi ve yapay zeka ile iş dünyasının dönüşüm mimarisini tasarlıyoruz.',
+    images: ['/og-image.png'],
+  },
+  robots: { index: true, follow: true },
+  alternates: { canonical: SITE_URL },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
