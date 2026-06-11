@@ -396,8 +396,8 @@ const CONTENT = {
 /* ── Motion variants ────────────────────────────────────── */
 const fromUp = {
   hidden: { opacity: 0, y: 32 },
-  show:   { opacity: 1, y: 0, transition: { duration: 0.75, ease: [0.16, 1, 0.3, 1] } },
-}
+  show:   { opacity: 1, y: 0, transition: { duration: 0.75, ease: 'easeOut' } },
+} as const
 
 /* ── Sub-components ─────────────────────────────────────── */
 function ProblemCard({ text, delay }: { text: string; delay: number }) {
@@ -570,7 +570,7 @@ export default function HizmetlerPage() {
             style={{ display: 'flex', flexDirection: 'column', minWidth: 0 }}
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
+            transition={{ duration: 1, ease: 'easeOut', delay: 0.3 }}
           >
             <div style={{ position: 'relative', overflow: 'hidden', flex: 1, minHeight: 0, borderRadius: '8px 8px 0 0' }}>
               <video
@@ -759,7 +759,7 @@ export default function HizmetlerPage() {
               initial={{ opacity: 0, y: 48, scale: 0.96 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 24, scale: 0.97 }}
-              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.5, ease: 'easeOut' }}
               className="relative z-10 w-full max-w-3xl rounded-sm border border-blue-500/30 overflow-y-auto max-h-[90vh]"
               style={{
                 backgroundColor: 'rgba(8,18,34,0.98)',
@@ -856,7 +856,7 @@ export default function HizmetlerPage() {
                 initial={{ opacity: 0, y: 48, scale: 0.96 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 24, scale: 0.97 }}
-                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 0.5, ease: 'easeOut' }}
                 className="relative z-10 w-full max-w-3xl rounded-sm border border-blue-500/30 overflow-y-auto max-h-[90vh]"
                 style={{ backgroundColor: 'rgba(8,18,34,0.98)', boxShadow: '0 0 80px rgba(74,123,167,0.18)' }}
                 onClick={(e) => e.stopPropagation()}
@@ -899,7 +899,7 @@ export default function HizmetlerPage() {
                       initial={{ opacity: 0, y: 12 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -8 }}
-                      transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                      transition={{ duration: 0.3, ease: 'easeOut' }}
                     >
                       {/* Title */}
                       <h2
@@ -1160,7 +1160,7 @@ export default function HizmetlerPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.45, ease: 'easeOut' }}
             >
               <AnimatedStagger className="grid sm:grid-cols-2 xl:grid-cols-4 gap-5">
                 {(c.cardLabels as readonly string[]).map((label, i) => (

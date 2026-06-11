@@ -1,5 +1,6 @@
 'use client'
 
+import React from 'react'
 import Link from 'next/link'
 import { useLang } from '@/context/LanguageContext'
 
@@ -44,8 +45,8 @@ function YouTubeIcon() {
 }
 
 type Social =
-  | { label: 'LinkedIn' | 'YouTube'; href: string; Icon: () => JSX.Element; hoverColor: string }
-  | { label: 'Instagram'; href: string; Icon: () => JSX.Element }
+  | { label: 'LinkedIn' | 'YouTube'; href: string; Icon: () => React.ReactElement; hoverColor: string }
+  | { label: 'Instagram'; href: string; Icon: () => React.ReactElement }
 
 const SOCIALS: Social[] = [
   { label: 'LinkedIn',  href: 'https://www.linkedin.com/in/ne%C5%9Fe-merdinler-0641ab241/', Icon: LinkedInIcon,  hoverColor: '#0A66C2' },

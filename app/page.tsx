@@ -49,17 +49,17 @@ const CONTENT = {
 const container = {
   hidden: {},
   show: { transition: { staggerChildren: 0.13, delayChildren: 0.35 } },
-}
+} as const
 
 const fadeUp = {
   hidden: { opacity: 0, y: 44 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.95, ease: [0.16, 1, 0.3, 1] } },
-}
+  show: { opacity: 1, y: 0, transition: { duration: 0.95, ease: 'easeOut' } },
+} as const
 
 const fadeIn = {
   hidden: { opacity: 0 },
   show: { opacity: 1, transition: { duration: 0.9, ease: 'easeOut' } },
-}
+} as const
 
 
 /* ── Page ───────────────────────────────────────────────── */
@@ -171,7 +171,7 @@ export default function HeroPage() {
             style={{ marginTop: '-7rem', marginBottom: '-6rem', marginRight: '-4rem' }}
             initial={{ opacity: 0, scale: 0.88 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1], delay: 0.9 }}
+            transition={{ duration: 1.8, ease: 'easeOut', delay: 0.9 }}
           >
             <video
               autoPlay

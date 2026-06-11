@@ -40,8 +40,8 @@ const CONTENT = {
 
 const fromUp = {
   hidden: { opacity: 0, y: 28 },
-  show:   { opacity: 1, y: 0, transition: { duration: 0.75, ease: [0.16, 1, 0.3, 1] } },
-}
+  show:   { opacity: 1, y: 0, transition: { duration: 0.75, ease: 'easeOut' } },
+} as const
 
 export default function IletisimPage() {
   const { lang } = useLang()

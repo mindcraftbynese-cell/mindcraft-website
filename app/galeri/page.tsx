@@ -49,9 +49,9 @@ const FILTERS: { key: Filter; tr: string; en: string }[] = [
 ]
 
 const fromUp = {
-  hidden: { opacity: 0, y: 28 },
-  show:   { opacity: 1, y: 0,  transition: { duration: 0.75, ease: [0.16, 1, 0.3, 1] } },
-}
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+} as const
 
 /* ── Page ──────────────────────────────────────────────────── */
 export default function GaleriPage() {
@@ -172,7 +172,7 @@ export default function GaleriPage() {
                   initial={{ opacity: 0, scale: 0.92 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.92 }}
-                  transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                  transition={{ duration: 0.35, ease: "easeOut" }}
                   onClick={() => setLightbox(i)}
                   className="relative aspect-[4/3] overflow-hidden rounded-lg cursor-pointer group"
                   style={{ border: '1px solid rgba(74,123,167,0.15)' }}
@@ -221,7 +221,7 @@ export default function GaleriPage() {
               initial={{ scale: 0.88, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.88, opacity: 0 }}
-              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
               onClick={e => e.stopPropagation()}
               className="relative max-w-5xl w-full"
             >

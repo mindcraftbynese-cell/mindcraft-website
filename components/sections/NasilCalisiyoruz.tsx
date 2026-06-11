@@ -78,7 +78,7 @@ export function NasilCalisiyoruz() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
           className="mb-20"
         >
           <span className="text-blue-400 text-[11px] font-bold tracking-[4px] uppercase block mb-5">
@@ -141,7 +141,7 @@ export function NasilCalisiyoruz() {
               transition={{
                 duration: 0.8,
                 delay: 0.1 + i * 0.18,
-                ease: [0.16, 1, 0.3, 1],
+                ease: 'easeOut',
               }}
               className="flex flex-col"
             >
