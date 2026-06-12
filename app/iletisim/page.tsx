@@ -53,7 +53,12 @@ export default function IletisimPage() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setLoading(true)
-    await new Promise(r => setTimeout(r, 1200))
+   const formData = new FormData(e.target as HTMLFormElement)
+    await fetch('https://formspree.io/f/xjgdpbre', {
+      method: 'POST',
+      body: formData,
+      headers: { Accept: 'application/json' },
+    })
     setLoading(false)
     setSubmitted(true)
     setTimeout(() => setSubmitted(false), 4000)
