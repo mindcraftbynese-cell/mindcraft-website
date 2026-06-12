@@ -54,7 +54,7 @@ export default function IletisimPage() {
     e.preventDefault()
     setLoading(true)
    const formData = new FormData(e.target as HTMLFormElement)
-    await fetch('https://formspree.io/f/xjgdpbre', {
+    await fetch('https://formspree.io/f/https://formspree.io/f/xwvjweal', {
       method: 'POST',
       body: formData,
       headers: { Accept: 'application/json' },
