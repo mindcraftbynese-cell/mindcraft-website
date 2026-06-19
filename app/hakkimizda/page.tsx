@@ -332,7 +332,7 @@ export default function HakkimizdaPage() {
         <div className="absolute inset-0 bg-dot-grid pointer-events-none opacity-30" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '48px', alignItems: 'start' }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
 
             {/* Left: Photo */}
             <AnimatedSection direction="left" className="h-full">
@@ -343,8 +343,9 @@ export default function HakkimizdaPage() {
                   overflow: 'hidden',
                   border: '1px solid rgba(255,255,255,0.1)',
                   boxShadow: '0 25px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(74,123,167,0.2)',
-                  height: '100%',
-                  minHeight: '500px',
+               height: 'auto',
+            minHeight: '320px',
+            maxHeight: '420px',
                 }}
               >
                 <Image
