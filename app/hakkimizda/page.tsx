@@ -487,7 +487,7 @@ export default function HakkimizdaPage() {
           </AnimatedSection>
 
           <AnimatedStagger
-            style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: '16px', marginBottom: '80px' }}
+            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-20"
             staggerDelay={0.1}
           >
             {c.ecosystem.board.members.map((member) => (
