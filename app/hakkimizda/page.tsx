@@ -337,17 +337,11 @@ export default function HakkimizdaPage() {
             {/* Left: Photo */}
             <AnimatedSection direction="left" className="h-full">
               <div
-                style={{
-                  position: 'relative',
-                  borderRadius: '8px',
-                  overflow: 'hidden',
-                  border: '1px solid rgba(255,255,255,0.1)',
-                  boxShadow: '0 25px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(74,123,167,0.2)',
-               height: 'auto',
-            minHeight: '320px',
-            maxHeight: '420px',
-                }}
-              >
+            className="relative rounded-lg overflow-hidden border border-white/10 h-[320px] sm:h-[420px] lg:h-[560px]"
+            style={{
+              boxShadow: '0 25px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(74,123,167,0.2)',
+            }}
+          >        
                 <Image
                   src="/nese.JPG"
                   alt="Neşe Merdinler"
