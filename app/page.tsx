@@ -167,7 +167,7 @@ export default function HeroPage() {
 
           {/* RIGHT: Hero video */}
           <motion.div
-            className="hidden lg:block relative self-stretch"
+            className="block relative self-stretch mt-8 lg:mt-0 max-w-sm mx-auto lg:max-w-none"
             style={{ marginTop: '-7rem', marginBottom: '-6rem', marginRight: '-4rem' }}
             initial={{ opacity: 0, scale: 0.88 }}
             animate={{ opacity: 1, scale: 1 }}
