@@ -332,12 +332,12 @@ export default function HakkimizdaPage() {
         <div className="absolute inset-0 bg-dot-grid pointer-events-none opacity-30" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
 
             {/* Left: Photo */}
             <AnimatedSection direction="left" className="h-full">
               <div
-            className="relative rounded-lg overflow-hidden border border-white/10 h-[320px] sm:h-[420px] lg:h-[560px]"
+            className="relative rounded-lg overflow-hidden border border-white/10 h-[320px] sm:h-[420px] lg:h-full"
             style={{
               boxShadow: '0 25px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(74,123,167,0.2)',
             }}
