@@ -12,7 +12,7 @@ type Cat = 'konusmalar' | 'kurumsal' | 'basin'
 const PHOTOS: { src: string; label: { tr: string; en: string }; cat: Cat; pos?: string }[] = [
   // Konuşmalar
   { src: '/galeri/konusmalar/akbank1.jpeg',           label: { tr: 'Akbank',                       en: 'Akbank'                      }, cat: 'konusmalar' },
-  { src: '/galeri/konusmalar/akbank2.jpeg', label: { tr: 'Akbank', en: 'Akbank' }, pos: 'top' },     
+  { src: '/galeri/konusmalar/akbank2.jpeg', label: { tr: 'Akbank', en: 'Akbank' }, cat: 'konusmalar', pos: 'top' },  
   { src: '/galeri/konusmalar/Denizbank.jpg',          label: { tr: 'Denizbank',                    en: 'Denizbank'                   }, cat: 'konusmalar' },
   { src: '/galeri/konusmalar/HRDergi.jpeg',           label: { tr: 'HRdergi',                      en: 'HRdergi'                     }, cat: 'konusmalar' },
   { src: '/galeri/konusmalar/Joint Idea.jpg',         label: { tr: 'Join+idea',                    en: 'Join+idea'                   }, cat: 'konusmalar' },
