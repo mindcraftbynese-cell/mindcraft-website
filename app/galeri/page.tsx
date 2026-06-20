@@ -9,10 +9,10 @@ import { AnimatedSection } from '@/components/ui/AnimatedSection'
 /* ── Photo data ────────────────────────────────────────────── */
 type Cat = 'konusmalar' | 'kurumsal' | 'basin'
 
-const PHOTOS: { src: string; label: { tr: string; en: string }; cat: Cat }[] = [
+const PHOTOS: { src: string; label: { tr: string; en: string }; cat: Cat; pos?: string }[] = [
   // Konuşmalar
   { src: '/galeri/konusmalar/akbank1.jpeg',           label: { tr: 'Akbank',                       en: 'Akbank'                      }, cat: 'konusmalar' },
-  { src: '/galeri/konusmalar/akbank2.jpeg',           label: { tr: 'Akbank',                       en: 'Akbank'                      }, cat: 'konusmalar' },
+  { src: '/galeri/konusmalar/akbank2.jpeg', label: { tr: 'Akbank', en: 'Akbank' }, pos: 'top' },     
   { src: '/galeri/konusmalar/Denizbank.jpg',          label: { tr: 'Denizbank',                    en: 'Denizbank'                   }, cat: 'konusmalar' },
   { src: '/galeri/konusmalar/HRDergi.jpeg',           label: { tr: 'HRdergi',                      en: 'HRdergi'                     }, cat: 'konusmalar' },
   { src: '/galeri/konusmalar/Joint Idea.jpg',         label: { tr: 'Join+idea',                    en: 'Join+idea'                   }, cat: 'konusmalar' },
@@ -178,12 +178,13 @@ export default function GaleriPage() {
                   style={{ border: '1px solid rgba(74,123,167,0.15)' }}
                 >
                   <Image
-                    src={encodeURI(photo.src)}
-                    alt={photo.label[lang]}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                  />
+              src={encodeURI(photo.src)}
+              alt={photo.label[lang]}
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              style={{ objectPosition: photo.pos === 'top' ? 'center top' : 'center center' }}
+            />
                   {/* Hover overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-1 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
