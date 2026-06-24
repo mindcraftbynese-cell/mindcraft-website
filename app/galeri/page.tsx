@@ -11,6 +11,8 @@ type Cat = 'konusmalar' | 'kurumsal' | 'basin'
 
 const PHOTOS: { src: string; label: { tr: string; en: string }; cat: Cat; pos?: string }[] = [
   // Konuşmalar
+ { src: '/galeri/konusmalar/BAU_FutureAI_26_1.jpeg', label: { tr: 'BAU Future AI', en: 'BAU Future AI' }, cat: 'konusmalar' },
+ { src: '/galeri/konusmalar/BAU_FutureAI_26_2.jpeg', label: { tr: 'BAU Future AI', en: 'BAU Future AI' }, cat: 'konusmalar' },
   { src: '/galeri/konusmalar/akbank1.jpeg',           label: { tr: 'Akbank',                       en: 'Akbank'                      }, cat: 'konusmalar' },
   { src: '/galeri/konusmalar/akbank2.jpeg', label: { tr: 'Akbank', en: 'Akbank' }, cat: 'konusmalar', pos: 'top' },  
   { src: '/galeri/konusmalar/Denizbank.jpg',          label: { tr: 'Denizbank',                    en: 'Denizbank'                   }, cat: 'konusmalar' },
@@ -21,8 +23,6 @@ const PHOTOS: { src: string; label: { tr: string; en: string }; cat: Cat; pos?: 
   { src: '/galeri/konusmalar/TLG.JPG',                label: { tr: 'TLG',                          en: 'TLG'                         }, cat: 'konusmalar' },
   { src: '/galeri/konusmalar/YTÜ.jpg',                label: { tr: 'Yıldız Teknik Üniversitesi',   en: 'Yıldız Technical University' }, cat: 'konusmalar' },
   { src: '/galeri/konusmalar/YZ Zirvesi.jpeg',        label: { tr: 'Yapay Zeka Zirvesi',           en: 'AI Summit'                   }, cat: 'konusmalar' },
-  { src: '/galeri/konusmalar/BAU_FutureAI_26_1.jpeg', label: { tr: 'BAU Future AI', en: 'BAU Future AI' }, cat: 'konusmalar' },
-    { src: '/galeri/konusmalar/BAU_FutureAI_26_2.jpeg', label: { tr: 'BAU Future AI', en: 'BAU Future AI' }, cat: 'konusmalar' },
   // Kurumsal
   { src: '/galeri/kurumsal/Carrefour 1.jpg',          label: { tr: 'CarrefourSA',                  en: 'CarrefourSA'                 }, cat: 'kurumsal' },
   { src: '/galeri/kurumsal/Carrefour 2.jpg',          label: { tr: 'CarrefourSA',                  en: 'CarrefourSA'                 }, cat: 'kurumsal' },
