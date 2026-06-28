@@ -221,10 +221,10 @@ export default function HeroPage() {
           <p className="text-slate-300 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
             Nörobilim temelli yaklaşımlarla organizasyonların dönüşüm mimarisini ele alan kapsamlı whitepaper'ımızı indirin.
           </p>
-          
-            href="/Surec_ve_Davranis_Tasarimi_Cagi_Nese_Merdinler.pdf"
+    <a
+      href="/Surec_ve_Davranis_Tasarimi_Cagi_Nese_Merdinler.pdf"
             download
-            className="inline-flex items-center gap-3 px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white text-[11px] font-bold tracking-[2.5px] uppercase rounded-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(74,123,167,0.4)]"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white text-[11px] font-bold tracking-[2.5px] uppercase rounded-lg transition-all duration-300 hover:-translate-y-0.5"
           >
             ↓ Whitepaper İndir
           </a>
