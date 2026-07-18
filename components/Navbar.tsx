@@ -13,6 +13,7 @@ const NAV_LINKS = [
   { href: '/referanslar',tr: 'Referanslar', en: 'References' },
   { href: '/galeri',     tr: 'Galeri',      en: 'Gallery'    },
   { href: '/iletisim',   tr: 'İletişim',    en: 'Contact'    },
+  { href: '/kaynaklar', tr: 'İşiniz İçin Fark Yaratan İçerikler', en: 'Resources for Your Business' },
 ]
 
 export function Navbar() {
