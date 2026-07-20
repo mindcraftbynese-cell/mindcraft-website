@@ -76,3 +76,37 @@ export default function ErisimTalebiPage() {
       <h1 className="font-display text-2xl font-bold mb-6 text-white">{c.title}</h1>
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
+type="hidden" name="_subject" value="Yeni İçerik Erişim Talebi" />
+        <input type="hidden" name="form_type" value="icerik_talebi" />
+        <input type="hidden" name="talep_edilen_icerik" value={icerik} />
+
+        <div>
+          <label className="block text-sm font-medium mb-1 text-white">{c.adSoyad}</label>
+          <input name="ad_soyad" required className="w-full border rounded-md px-3 py-2 bg-white text-black" />
+        </div>
+        <div>
+          <label className="block text-sm font-medium mb-1 text-white">{c.sirket}</label>
+          <input name="sirket" required className="w-full border rounded-md px-3 py-2 bg-white text-black" />
+        </div>
+        <div>
+          <label className="block text-sm font-medium mb-1 text-white">{c.email}</label>
+          <input type="email" name="email" required className="w-full border rounded-md px-3 py-2 bg-white text-black" />
+        </div>
+        <div>
+          <label className="block text-sm font-medium mb-1 text-white">{c.telefon}</label>
+          <input type="tel" name="telefon" required className="w-full border rounded-md px-3 py-2 bg-white text-black" />
+        </div>
+        <div>
+          <label className="block text-sm font-medium mb-1 text-white">{c.pozisyon}</label>
+          <input name="pozisyon" required className="w-full border rounded-md px-3 py-2 bg-white text-black" />
+        </div>
+
+        {hata && <p className="text-red-400 text-sm">{c.error}</p>}
+
+        <button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-md">
+          {c.submit}
+        </button>
+      </form>
+    </main>
+  );
+}
