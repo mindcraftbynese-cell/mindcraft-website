@@ -10,7 +10,7 @@ const kaynaklar = [
 
 export default function KaynaklarPage() {
   return (
-    <main className="max-w-4xl mx-auto px-4 py-16">
+   <main className="relative z-10 w-full max-w-[1600px] mx-auto px-8 lg:px-16 pt-28 pb-24">
 <h1 className="mb-6">
   <span
     className="block font-display font-bold tracking-tight leading-[1.08] text-cream"
@@ -28,11 +28,11 @@ export default function KaynaklarPage() {
     İçerikler
   </span>
 </h1>
-      <p className="text-gray-600 mb-10">
+     <p className="text-gray-600 mb-10 max-w-2xl">
         Aşağıdaki içerikler kurumsal okuyucular için hazırlanmıştır. Erişim
         talebiniz değerlendirildikten sonra tarafınıza iletilecektir.
               </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl">
         {kaynaklar.map((k) => (
           <div key={k.slug} className="border rounded-lg p-6 shadow-sm">
          <h2 className="font-display text-xl font-semibold mb-2 text-white">{k.baslik}</h2>
