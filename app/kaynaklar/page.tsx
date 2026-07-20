@@ -60,8 +60,8 @@ export default function KaynaklarPage() {
 
   return (
     <main className="relative z-10 w-full max-w-[1600px] mx-auto px-8 lg:px-16 pt-28 pb-24">
-      <div className="grid lg:grid-cols-[1fr_45%] gap-10 items-start mb-16">
-       <div className="lg:-mt-6">
+      <div className="relative mb-16" style={{ minHeight: '420px' }}>
+        <div className="relative z-10 max-w-xl">
           <h1 className="mb-6">
             <span
               className="block font-display font-bold tracking-tight leading-[0.95] text-cream"
@@ -82,8 +82,11 @@ export default function KaynaklarPage() {
           <p className="text-gray-400 max-w-2xl">{c.intro}</p>
         </div>
 
-        {/* Sağ taraf: hareketli görsel */}
-        <div className="hidden lg:block relative" style={{ height: '640px', marginRight: '-4rem' }}>
+        {/* Sağ taraf: hareketli görsel — mutlak konumlu, altındaki içeriği etkilemez */}
+        <div
+          className="hidden lg:block absolute top-0 right-0"
+          style={{ width: '45%', height: '420px', marginRight: '-4rem' }}
+        >
           <video
             autoPlay
             muted
