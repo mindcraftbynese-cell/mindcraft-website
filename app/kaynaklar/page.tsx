@@ -60,7 +60,7 @@ export default function KaynaklarPage() {
 
   return (
     <main className="relative z-10 w-full max-w-[1600px] mx-auto px-8 lg:px-16 pt-28 pb-24">
-      <div className="relative mb-16" style={{ minHeight: '420px' }}>
+      <div className="relative mb-16" style={{ minHeight: '280px' }}>
         <div className="relative z-10 max-w-xl">
           <h1 className="mb-6">
             <span
@@ -85,7 +85,7 @@ export default function KaynaklarPage() {
         {/* Sağ taraf: hareketli görsel — mutlak konumlu, altındaki içeriği etkilemez */}
         <div
           className="hidden lg:block absolute top-0 right-0"
-          style={{ width: '45%', height: '420px', marginRight: '-4rem' }}
+          style={{ width: '45%', height: '280px', marginRight: '-4rem' }}
         >
           <video
             autoPlay
