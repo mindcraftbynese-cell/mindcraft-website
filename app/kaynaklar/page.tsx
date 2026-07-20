@@ -108,7 +108,9 @@ export default function KaynaklarPage() {
 
         {/* Sağ taraf: Canva'da hazırladığın hareketli görsel buraya gelecek */}
         <div className="hidden lg:block">
-          {/* Görsel hazır olunca buraya <img> veya <video> etiketi ekleyeceğiz */}
+         <video autoPlay loop muted playsInline className="w-full h-auto rounded-xl">
+  <source src="/kaynaklar/kaynaklar-hero-animasyon.mp4" type="video/mp4" />
+</video>
         </div>
       </div>
 
