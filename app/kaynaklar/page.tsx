@@ -84,7 +84,7 @@ export default function KaynaklarPage() {
 
   return (
     <main className="relative z-10 w-full max-w-[1600px] mx-auto px-8 lg:px-16 pt-28 pb-24">
-      <div className="grid lg:grid-cols-[1fr_45%] gap-10 items-center mb-16">
+      <div className="grid lg:grid-cols-[1fr_45%] gap-10 items-center mb-16 lg:min-h-[600px]">
         <div>
           <h1 className="mb-6">
             <span
@@ -109,7 +109,7 @@ export default function KaynaklarPage() {
         {/* Sağ taraf: hareketli görsel */}
 <div
   className="hidden lg:block relative self-stretch"
-  style={{ marginTop: '-7rem', marginBottom: '-6rem', marginRight: '-4rem' }}
+  style={{ marginRight: '-4rem' }}
 >
   <video
     autoPlay
