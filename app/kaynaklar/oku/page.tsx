@@ -16,14 +16,8 @@ const BELGELER = [
 ] as const;
 
 const CONTENT = {
-  tr: {
-    notFound: "Belge bulunamadı ya da link geçersiz.",
-    download: "PDF Olarak İndir",
-  },
-  en: {
-    notFound: "Document not found or the link is invalid.",
-    download: "Download as PDF",
-  },
+  tr: { notFound: "Belge bulunamadı ya da link geçersiz." },
+  en: { notFound: "Document not found or the link is invalid." },
 } as const;
 
 export default function OkuPage() {
@@ -51,7 +45,10 @@ export default function OkuPage() {
   }
 
   return (
-    <main className="relative z-10 max-w-3xl mx-auto px-4 pt-32 pb-24">
+    <main
+      className="relative z-10 max-w-3xl mx-auto px-4 pt-32 pb-24"
+      onContextMenu={(e) => e.preventDefault()}
+    >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={belge.kapak}
@@ -61,20 +58,12 @@ export default function OkuPage() {
       <h1 className="font-display text-2xl font-bold text-white text-center mb-8">
         {belge.baslik[lang]}
       </h1>
-      <div
-        className="rounded-lg overflow-hidden border border-white/10 mb-8"
-        style={{ height: "80vh" }}
-      >
-        <iframe src={belge.pdf} className="w-full h-full" title={belge.baslik[lang]} />
-      </div>
-      <div className="text-center">
-        
-          href={belge.pdf}
-          download
-          className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-bold"
-        >
-          {c.download}
-        </a>
+      <div className="rounded-lg overflow-hidden border border-white/10" style={{ height: "80vh" }}>
+        <iframe
+          src={`${belge.pdf}#toolbar=0&navpanes=0&scrollbar=0`}
+          className="w-full h-full"
+          title={belge.baslik[lang]}
+        />
       </div>
     </main>
   );
