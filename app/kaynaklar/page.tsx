@@ -106,12 +106,31 @@ export default function KaynaklarPage() {
           <p className="text-gray-400 max-w-2xl">{c.intro}</p>
         </div>
 
-        {/* Sağ taraf: Canva'da hazırladığın hareketli görsel buraya gelecek */}
-        <div className="hidden lg:block">
-         <video autoPlay loop muted playsInline className="w-full h-auto rounded-xl">
-  <source src="/kaynaklar/kaynaklar-hero-animasyon.mp4" type="video/mp4" />
-</video>
-        </div>
+        {/* Sağ taraf: hareketli görsel */}
+<div
+  className="hidden lg:block relative self-stretch"
+  style={{ marginTop: '-7rem', marginBottom: '-6rem', marginRight: '-4rem' }}
+>
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="w-full h-full block"
+    style={{ objectFit: 'cover' }}
+  >
+    <source src="/kaynaklar/kaynaklar-hero-animasyon.mp4" type="video/mp4" />
+  </video>
+  <div
+    aria-hidden="true"
+    style={{
+      position: 'absolute',
+      inset: 0,
+      background: 'radial-gradient(ellipse 75% 78% at 52% 50%, transparent 38%, #0A1628 74%)',
+      pointerEvents: 'none',
+    }}
+  />
+</div>
       </div>
 
       <div className="space-y-16 max-w-5xl">
