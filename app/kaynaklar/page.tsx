@@ -64,13 +64,13 @@ export default function KaynaklarPage() {
        <div className="lg:-mt-6">
           <h1 className="mb-6">
             <span
-              className="block font-display font-bold tracking-tight leading-[1.08] text-cream"
+              className="block font-display font-bold tracking-tight leading-[0.95] text-cream"
               style={{ fontSize: 'clamp(1.9rem, 3.2vw, 3.2rem)' }}
             >
               {c.headline1}
             </span>
             <span
-              className="block font-display font-bold tracking-tight leading-[1.08] italic bg-clip-text text-transparent"
+              className="block font-display font-bold tracking-tight leading-[0.95] italic bg-clip-text text-transparent"
               style={{
                 fontSize: 'clamp(1.9rem, 3.2vw, 3.2rem)',
                 backgroundImage: 'linear-gradient(135deg, #7FB9D7 0%, #4A7BA7 65%)',
@@ -83,7 +83,7 @@ export default function KaynaklarPage() {
         </div>
 
         {/* Sağ taraf: hareketli görsel */}
-        <div className="hidden lg:block relative" style={{ height: '520px', marginRight: '-4rem' }}>
+        <div className="hidden lg:block relative" style={{ height: '640px', marginRight: '-4rem' }}>
           <video
             autoPlay
             muted
