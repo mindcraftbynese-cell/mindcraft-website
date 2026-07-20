@@ -61,7 +61,7 @@ export default function KaynaklarPage() {
   return (
     <main className="relative z-10 w-full max-w-[1600px] mx-auto px-8 lg:px-16 pt-28 pb-24">
       <div className="grid lg:grid-cols-[1fr_45%] gap-10 items-start mb-16">
-        <div>
+       <div className="lg:-mt-6">
           <h1 className="mb-6">
             <span
               className="block font-display font-bold tracking-tight leading-[1.08] text-cream"
@@ -92,8 +92,8 @@ export default function KaynaklarPage() {
             className="w-full h-full block"
             style={{
               objectFit: 'cover',
-              maskImage: 'radial-gradient(ellipse 70% 70% at 50% 50%, black 45%, transparent 85%)',
-              WebkitMaskImage: 'radial-gradient(ellipse 70% 70% at 50% 50%, black 45%, transparent 85%)',
+              maskImage: 'radial-gradient(circle at 50% 50%, black 25%, transparent 60%)',
+              WebkitMaskImage: 'radial-gradient(circle at 50% 50%, black 25%, transparent 60%)',
             }}
           >
             <source src="/kaynaklar/kaynaklar-hero-animasyon.mp4" type="video/mp4" />
