@@ -57,7 +57,6 @@ const CONTENT = {
 export default function KaynaklarPage() {
   const { lang } = useLang();
   const c = CONTENT[lang];
-
   return (
     <main className="relative z-10 w-full max-w-[1600px] mx-auto px-8 lg:px-16 pt-28 pb-24">
       <div className="relative mb-16" style={{ minHeight: '280px' }}>
