@@ -12,21 +12,9 @@ const CONTENT = {
     ctaLabel: "Erişim Talep Et",
     comingSoon: "Yakında eklenecek.",
     kategoriler: [
-      {
-        slug: "beyin-bilgisi-ile-liderlik",
-        baslik: "Beyin Bilgisi ile Liderlik",
-        belgeler: [],
-      },
-      {
-        slug: "beyin-bilgisi-ile-insan-kaynaklari-yonetimi",
-        baslik: "Beyin Bilgisi ile İnsan Kaynakları Yönetimi",
-        belgeler: [],
-      },
-      {
-        slug: "yapay-zeka-insan-is-birligi-entegrasyonu",
-        baslik: "Yapay Zeka-İnsan İş Birliği Entegrasyonu",
-        belgeler: [],
-      },
+      { slug: "beyin-bilgisi-ile-liderlik", baslik: "Beyin Bilgisi ile Liderlik", belgeler: [] },
+      { slug: "beyin-bilgisi-ile-insan-kaynaklari-yonetimi", baslik: "Beyin Bilgisi ile İnsan Kaynakları Yönetimi", belgeler: [] },
+      { slug: "yapay-zeka-insan-is-birligi-entegrasyonu", baslik: "Yapay Zeka-İnsan İş Birliği Entegrasyonu", belgeler: [] },
       {
         slug: "stratejik-donusum-ve-beyin-odakli-organizasyon-tasarimi",
         baslik: "Stratejik Dönüşüm ve Beyin Odaklı Organizasyon Tasarımı",
@@ -48,21 +36,9 @@ const CONTENT = {
     ctaLabel: "Request Access",
     comingSoon: "Coming soon.",
     kategoriler: [
-      {
-        slug: "beyin-bilgisi-ile-liderlik",
-        baslik: "Leadership Through Brain Science",
-        belgeler: [],
-      },
-      {
-        slug: "beyin-bilgisi-ile-insan-kaynaklari-yonetimi",
-        baslik: "Brain Science in Human Resources Management",
-        belgeler: [],
-      },
-      {
-        slug: "yapay-zeka-insan-is-birligi-entegrasyonu",
-        baslik: "AI-Human Collaboration Integration",
-        belgeler: [],
-      },
+      { slug: "beyin-bilgisi-ile-liderlik", baslik: "Leadership Through Brain Science", belgeler: [] },
+      { slug: "beyin-bilgisi-ile-insan-kaynaklari-yonetimi", baslik: "Brain Science in Human Resources Management", belgeler: [] },
+      { slug: "yapay-zeka-insan-is-birligi-entegrasyonu", baslik: "AI-Human Collaboration Integration", belgeler: [] },
       {
         slug: "stratejik-donusum-ve-beyin-odakli-organizasyon-tasarimi",
         baslik: "Strategic Transformation & Brain-Centered Organizational Design",
@@ -84,7 +60,7 @@ export default function KaynaklarPage() {
 
   return (
     <main className="relative z-10 w-full max-w-[1600px] mx-auto px-8 lg:px-16 pt-28 pb-24">
-      <div className="grid lg:grid-cols-[1fr_45%] gap-10 items-center mb-16 lg:min-h-[600px]">
+      <div className="grid lg:grid-cols-[1fr_45%] gap-10 items-start mb-16">
         <div>
           <h1 className="mb-6">
             <span
@@ -107,30 +83,22 @@ export default function KaynaklarPage() {
         </div>
 
         {/* Sağ taraf: hareketli görsel */}
-<div
-  className="hidden lg:block relative self-stretch"
-  style={{ marginRight: '-4rem' }}
->
-  <video
-    autoPlay
-    muted
-    loop
-    playsInline
-    className="w-full h-full block"
-    style={{ objectFit: 'cover' }}
-  >
-    <source src="/kaynaklar/kaynaklar-hero-animasyon.mp4" type="video/mp4" />
-  </video>
-  <div
-    aria-hidden="true"
-    style={{
-      position: 'absolute',
-      inset: 0,
-      background: 'radial-gradient(ellipse 75% 78% at 52% 50%, transparent 38%, #0A1628 74%)',
-      pointerEvents: 'none',
-    }}
-  />
-</div>
+        <div className="hidden lg:block relative" style={{ height: '520px', marginRight: '-4rem' }}>
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full block"
+            style={{
+              objectFit: 'cover',
+              maskImage: 'radial-gradient(ellipse 70% 70% at 50% 50%, black 45%, transparent 85%)',
+              WebkitMaskImage: 'radial-gradient(ellipse 70% 70% at 50% 50%, black 45%, transparent 85%)',
+            }}
+          >
+            <source src="/kaynaklar/kaynaklar-hero-animasyon.mp4" type="video/mp4" />
+          </video>
+        </div>
       </div>
 
       <div className="space-y-16 max-w-5xl">
