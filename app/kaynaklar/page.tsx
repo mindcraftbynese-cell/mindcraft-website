@@ -46,7 +46,7 @@ const CONTENT = {
           {
             slug: "surec-ve-davranis-tasarimi-cagi",
             alt: "Corporate Process, System and Behavior Design Era",
-            kapak: "/kaynaklar/kapaklar_surec-ve-davranis-tasarimi-cagi-kapak.jpg",
+            kapak: "/kaynaklar/kapaklar_surec-ve-davranis-tasarimi-cagi-kapak-en.jpg",
           },
         ],
       },
