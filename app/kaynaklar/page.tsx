@@ -11,7 +11,23 @@ const kaynaklar = [
 export default function KaynaklarPage() {
   return (
     <main className="max-w-4xl mx-auto px-4 py-16">
-  <h1 className="font-display text-3xl font-bold mb-4 text-white">İşiniz İçin Fark Yaratan İçerikler</h1>
+<h1 className="mb-6">
+  <span
+    className="block font-display font-bold tracking-tight leading-[1.08] text-cream"
+    style={{ fontSize: 'clamp(1.9rem, 3.2vw, 3.2rem)' }}
+  >
+    İşiniz İçin Fark Yaratan
+  </span>
+  <span
+    className="block font-display font-bold tracking-tight leading-[1.08] italic bg-clip-text text-transparent"
+    style={{
+      fontSize: 'clamp(1.9rem, 3.2vw, 3.2rem)',
+      backgroundImage: 'linear-gradient(135deg, #7FB9D7 0%, #4A7BA7 65%)',
+    }}
+  >
+    İçerikler
+  </span>
+</h1>
       <p className="text-gray-600 mb-10">
         Aşağıdaki içerikler kurumsal okuyucular için hazırlanmıştır. Erişim
         talebiniz değerlendirildikten sonra tarafınıza iletilecektir.
