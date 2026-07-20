@@ -84,7 +84,7 @@ export default function KaynaklarPage() {
         {/* Sağ taraf: hareketli görsel — mutlak konumlu, altındaki içeriği etkilemez */}
         <div
           className="hidden lg:block absolute top-0 right-0"
-          style={{ width: '45%', height: '280px', marginRight: '-4rem' }}
+          style={{ width: '70%', height: '280px', marginRight: '-4rem' }}
         >
           <video
             autoPlay
