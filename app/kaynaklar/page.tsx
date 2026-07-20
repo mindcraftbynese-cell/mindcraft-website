@@ -1,32 +1,10 @@
 import Link from "next/link";
 
 const kategoriler = [
-  {
-    baslik: "Beyin Bilgisi ile Liderlik",
-    kaynaklar: [
-      // Yeni içerik eklemek için buraya şu formatta bir obje ekle:
-      // { slug: "kisa-isim", baslik: "Başlık", aciklama: "Kısa açıklama." },
-    ],
-  },
-  {
-    baslik: "Beyin Bilgisi ile İnsan Kaynakları Yönetimi",
-    kaynaklar: [],
-  },
-  {
-    baslik: "Yapay Zeka-İnsan İş Birliği Entegrasyonu",
-    kaynaklar: [],
-  },
-  {
-    baslik: "Stratejik Dönüşüm ve Beyin Odaklı Organizasyon Tasarımı",
-    kaynaklar: [
-      {
-        slug: "surec-ve-davranis-tasarimi-cagi",
-        baslik: "Süreç ve Davranış Tasarımı Çağı",
-        aciklama:
-          "Nörobilim temelli yaklaşımlarla organizasyonların dönüşüm mimarisini ele alan kapsamlı white paper.",
-      },
-    ],
-  },
+  { slug: "beyin-bilgisi-ile-liderlik", baslik: "Beyin Bilgisi ile Liderlik" },
+  { slug: "beyin-bilgisi-ile-insan-kaynaklari-yonetimi", baslik: "Beyin Bilgisi ile İnsan Kaynakları Yönetimi" },
+  { slug: "yapay-zeka-insan-is-birligi-entegrasyonu", baslik: "Yapay Zeka-İnsan İş Birliği Entegrasyonu" },
+  { slug: "stratejik-donusum-ve-beyin-odakli-organizasyon-tasarimi", baslik: "Stratejik Dönüşüm ve Beyin Odaklı Organizasyon Tasarımı" },
 ];
 
 export default function KaynaklarPage() {
@@ -51,36 +29,27 @@ export default function KaynaklarPage() {
       </h1>
 
       <p className="text-gray-400 mb-16 max-w-2xl">
-        Aşağıdaki içerikler kurumsal okuyucular için hazırlanmıştır. Erişim
-        talebiniz değerlendirildikten sonra tarafınıza iletilecektir.
+        Aşağıdaki içerik kategorilerinden birine tıklayarak erişim talep
+        edebilirsiniz. Talebiniz değerlendirildikten sonra tarafınıza
+        iletilecektir.
       </p>
 
-      {kategoriler.map((kategori) => (
-        <section key={kategori.baslik} className="mb-16 max-w-4xl">
-          <h2 className="font-display text-xl font-bold text-cream mb-6 border-b border-white/10 pb-3">
-            {kategori.baslik}
-          </h2>
-
-          {kategori.kaynaklar.length === 0 ? (
-            <p className="text-gray-500 italic">Yakında eklenecek.</p>
-          ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {kategori.kaynaklar.map((k) => (
-                <div key={k.slug} className="border border-white/10 rounded-lg p-6 shadow-sm">
-                  <h3 className="font-display text-lg font-semibold mb-2 text-white">{k.baslik}</h3>
-                  <p className="text-gray-400 mb-4">{k.aciklama}</p>
-                  <Link
-                    href={`/kaynaklar/erisim-talebi?icerik=${k.slug}`}
-                    className="inline-block bg-black text-white px-4 py-2 rounded-md text-sm"
-                  >
-                    Erişim Talep Et
-                  </Link>
-                </div>
-              ))}
-            </div>
-          )}
-        </section>
-      ))}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl">
+        {kategoriler.map((k) => (
+          <Link
+            key={k.slug}
+            href={`/kaynaklar/erisim-talebi?icerik=${k.slug}`}
+            className="group block border border-white/10 rounded-xl p-8 bg-blue-950/10 hover:border-blue-400/40 hover:bg-blue-950/20 transition-all duration-300"
+          >
+            <span className="inline-flex items-center gap-2 text-blue-300/70 text-[11px] font-bold tracking-[2px] uppercase mb-4">
+              ✓ Erişim Talep Et
+            </span>
+            <h2 className="font-display text-xl font-bold text-cream group-hover:text-white transition-colors">
+              {k.baslik}
+            </h2>
+          </Link>
+        ))}
+      </div>
     </main>
   );
 }
