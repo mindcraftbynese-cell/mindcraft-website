@@ -209,28 +209,28 @@ export default function HeroPage() {
     </main>
     <NedenBiz />
     <NasilCalisiyoruz />
-      {/* == KAYNAKLAR CTA == */}
+     {/* == KAYNAKLAR CTA == */}
 <section className="py-20 relative z-[1]" style={{ background: 'linear-gradient(180deg, rgba(6,14,26,0.82) 0%, rgba(10,22,40,0.88) 100%)' }}>
   <div className="max-w-4xl mx-auto px-8 lg:px-16 text-center">
     <span className="inline-flex items-center text-blue-300/70 text-[11px] font-bold tracking-[4px] uppercase border border-blue-400/20 rounded-full px-5 py-2.5 bg-blue-500/5 mb-8 block">
-      — Kaynaklar
+      {lang === 'tr' ? '— Kaynaklar' : '— Resources'}
     </span>
     <h2 className="font-display font-bold text-cream mb-6" style={{ fontSize: 'clamp(1.8rem, 3vw, 3rem)' }}>
-      Makaleler & White Paper'lar
+      {lang === 'tr' ? "Makaleler & White Paper'lar" : 'Articles & White Papers'}
     </h2>
     <p className="text-slate-300 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
-      Nörobilim temelli yaklaşımlarla organizasyonların dönüşüm mimarisini ele alan makale ve white paper'larımıza erişim talep edin.
-   </p>
-
-
-  <a
-    href="/kaynaklar"
-  className="inline-flex items-center gap-3 px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white text-[11px] font-bold tracking-[2.5px] uppercase rounded-lg transition-all duration-300 hover:-translate-y-0.5"
->
-      Kaynaklara Git
+      {lang === 'tr'
+        ? "Nörobilim temelli yaklaşımlarla organizasyonların dönüşüm mimarisini ele alan makale ve white paper'larımıza erişim talep edin."
+        : 'Request access to our articles and white papers exploring organizational transformation through neuroscience-based approaches.'}
+    </p>
+    
+     <a
+       href="/kaynaklar"
+      className="inline-flex items-center gap-3 px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white text-[11px] font-bold tracking-[2.5px] uppercase rounded-lg transition-all duration-300 hover:-translate-y-0.5"
+    >
+      {lang === 'tr' ? 'Kaynaklara Git' : 'Go to Resources'}
     </a>
   </div>
-</section>
-    </>
+</section>    </>
   )
 }
