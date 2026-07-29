@@ -21,6 +21,10 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     setMounted(true)
   }, [])
 
+  useEffect(() => {
+    document.documentElement.lang = lang
+  }, [lang])
+
   // Suppress SSR/CSR mismatch: render with 'tr' on server, hydrate silently
   if (!mounted) {
     return (
