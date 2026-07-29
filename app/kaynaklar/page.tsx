@@ -12,7 +12,17 @@ const CONTENT = {
     ctaLabel: "Erişim Talep Et",
     comingSoon: "Yakında eklenecek.",
     kategoriler: [
-      { slug: "beyin-bilgisi-ile-liderlik", baslik: "Beyin Bilgisi ile Liderlik", belgeler: [] },
+     {
+  slug: "beyin-bilgisi-ile-liderlik",
+  baslik: "Beyin Bilgisi ile Liderlik",
+  belgeler: [
+    {
+      slug: "belirsizlik-caginda-karar",
+      alt: "Belirsizlik Çağında Karar: Değişimi Yönetmek Yerine Belirsizlik Mimarisi Tasarlamak",
+      kapak: "/kaynaklar/kapaklar_belirsizlik-caginda-karar-kapak.jpg",
+    },
+  ],
+},
       { slug: "beyin-bilgisi-ile-insan-kaynaklari-yonetimi", baslik: "Beyin Bilgisi ile İnsan Kaynakları Yönetimi", belgeler: [] },
       { slug: "yapay-zeka-insan-is-birligi-entegrasyonu", baslik: "Yapay Zeka-İnsan İş Birliği Entegrasyonu", belgeler: [] },
       {
