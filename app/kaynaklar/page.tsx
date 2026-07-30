@@ -46,7 +46,17 @@ const CONTENT = {
     ctaLabel: "Request Access",
     comingSoon: "Coming soon.",
     kategoriler: [
-      { slug: "beyin-bilgisi-ile-liderlik", baslik: "Leadership Through Brain Science", belgeler: [] },
+   {
+  slug: "beyin-bilgisi-ile-liderlik",
+  baslik: "Leadership Through Brain Science",
+  belgeler: [
+    {
+      slug: "belirsizlik-caginda-karar",
+      alt: "Deciding in the Age of Uncertainty: Designing an Architecture of Uncertainty Instead of Managing Change",
+      kapak: "/kaynaklar/kapaklar_belirsizlik-caginda-karar-kapak-en.jpg.jpg",
+    },
+  ],
+},
       { slug: "beyin-bilgisi-ile-insan-kaynaklari-yonetimi", baslik: "Brain Science in Human Resources Management", belgeler: [] },
       { slug: "yapay-zeka-insan-is-birligi-entegrasyonu", baslik: "AI-Human Collaboration Integration", belgeler: [] },
       {
