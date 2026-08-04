@@ -234,7 +234,7 @@ function LogoCard({ name, src }: { name: string; src: string }) {
         background: '#ffffff',
         borderRadius: '8px',
         border: `1px solid ${hovered ? 'rgba(201,168,76,0.6)' : 'rgba(201,168,76,0.2)'}`,
-        padding: '16px',
+        padding: '10px',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -255,7 +255,7 @@ function LogoCard({ name, src }: { name: string; src: string }) {
           src={src}
           alt={name}
           onError={() => setImgFailed(true)}
-          style={{ maxWidth: '100%', maxHeight: '80px', minHeight: '50px', objectFit: 'contain' }}
+          style={{ maxWidth: '100%', maxHeight: '92px', minHeight: '50px', objectFit: 'contain' }}
         />
       )}
       <span style={{
