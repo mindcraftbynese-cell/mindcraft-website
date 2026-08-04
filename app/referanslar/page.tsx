@@ -51,10 +51,12 @@ const CLIENTS = [
   { name: 'Sabancı Üniversitesi EDU',    src: '/sabanci.png' },
   { name: 'TEDx Adana Women',            src: '/TED.png' },
   { name: 'TSKB',                         src: '/logo-tskb.jpg' },
+  { name: 'Türk Telekom',                 src: '/logo-turktelekom.jpg' },
   { name: 'Viennalife',                   src: '/logo-viennalife.png' },
   { name: 'Yapı Kredi',                  src: '/logo-yapikredi.png' },
   { name: 'Yeditepe Üniversitesi',       src: '/logo-yeditepe.png' },
   { name: 'Yenibirlider Derneği',        src: '/logo-yenibirlider.png' },
+  { name: 'Yıldız Teknik Üniversitesi',  src: '/logo-ytu.png' },
   { name: 'Zorlu',                        src: '/logo-zorlu.png' },
 ]
 
