@@ -49,6 +49,7 @@ const CLIENTS = [
   { name: 'Ray Sigorta',                  src: '/logo-ray.png' },
   { name: 'Sabancı Üniversitesi',         src: '/sabanciun_logo.png' },
   { name: 'Sabancı Üniversitesi EDU',    src: '/sabanci.png' },
+  { name: 'SOCAR',                        src: '/logo-socar.png' },
   { name: 'TEDx Adana Women',            src: '/TED.png' },
   { name: 'TSKB',                         src: '/logo-tskb.jpg' },
   { name: 'Türk Telekom',                 src: '/logo-turktelekom.jpg' },
